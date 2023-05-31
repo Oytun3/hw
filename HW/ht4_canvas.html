@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Example</title>
+  <style>
+    #myCanvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h2>Canvas Example</h2>
+
+  <canvas id="myCanvas" width="400" height="200"></canvas>
+
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Draw a rectangle
+    ctx.fillStyle = "red";
+    ctx.fillRect(50, 50, 200, 100);
+
+    // Draw a circle
+    ctx.beginPath();
+    ctx.arc(300, 100, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "blue";
+    ctx.fill();
+
+    // Draw text
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "black";
+    ctx.fillText("Hello, Canvas!", 50, 180);
+  </script>
+</body>
+</html>
